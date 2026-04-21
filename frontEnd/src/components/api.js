@@ -1,0 +1,13 @@
+import axios from "axios";
+const API = axios.create({ baseURL: "https://69e5d6bf4a15e408fe4a05e7-api-capstone.myanatomy.ai" });
+
+
+API.interceptors.request.use((req) => {
+  const user = localStorage.getItem("user");
+  if (user) {
+    req.headers.Authorization = `Bearer ${JSON.parse(user).token}`;
+  }
+  return req;
+});
+export const register = (formData) => API.post("/api/auth/register", formData);
+export const login = (formData) => API.post("/api/auth/login", formData);
