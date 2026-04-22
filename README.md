@@ -81,7 +81,7 @@ AI-powered study assistants are increasingly used to enhance learning efficiency
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the Repository
+1️⃣ Clone the Repository
 
 ```bash
 git clone https://github.com/KunshSabharwal/MyAnatomyBootcamp_AI_Study_Helper.git
@@ -152,7 +152,7 @@ http://localhost:5173
 - Environment variable setup
 - API debugging using browser DevTools
 
-🧠 Learnings
+## 🧠 Learnings
 
 - Practical experience with MERN stack
 - Debugging real-world backend issues
@@ -160,7 +160,7 @@ http://localhost:5173
 - Handling async data flow in React
 - Working with external AI APIs
 
-🎯 Future Improvements
+## 🎯 Future Improvements
 
 - Add file upload (PDF → summary)
 - Improve UI with animations
@@ -168,11 +168,11 @@ http://localhost:5173
 - Implement spaced repetition
 - Deploy on cloud (Render / Vercel)
 
-🤝 Acknowledgement
+## 🤝 Acknowledgement
 
 - This project was built during a 2-day bootcamp conducted by MyAnatomy Organization, where we were guided step-by-step in building an AI-powered application from scratch. Thanks to @https://github.com/mishrakansha for the session.
 
-📌 Author
+# 📌 Author
 
 - Kunsh Sabharwal
 - GitHub: https://github.com/KunshSabharwal
