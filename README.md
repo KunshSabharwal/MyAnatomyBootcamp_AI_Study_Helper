@@ -98,9 +98,10 @@ npm install
 3️⃣Create a .env file and run backEnd & frontEnd
 
 ```bash
-PORT=8080
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+MONGO_URI= "your_mongodb_database_uri"
+MONGO_DATABASE= "your_database_name"
+JWT_SECRET = "your_secret_key"
+GEMINI_API_KEY = "your_gemini_api_key"
 
 backEnd Setup ->
 cd backEnd
