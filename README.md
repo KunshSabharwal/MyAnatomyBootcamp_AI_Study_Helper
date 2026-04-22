@@ -95,21 +95,22 @@ cd backEnd
 npm install
 ```
 
-3️⃣Create a .env file and run backEnd
+3️⃣Create a .env file and run backEnd & frontEnd
 
 ```bash
 PORT=8080
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
+
+backEnd Setup ->
+cd backEnd
+npm install
 npm start
-Frontend Setup
+
+Frontend Setup ->
 cd frontEnd
 npm install
 npm run dev
-
-App runs on:
-
-http://localhost:5173
 ```
 
 ## 🔌 API Endpoints
