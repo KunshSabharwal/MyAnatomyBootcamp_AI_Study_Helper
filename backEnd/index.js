@@ -1,20 +1,27 @@
-import express from 'express'
 import dotenv from 'dotenv';
-import connectDB from './config/db.js';
-import authRoutes from "./routes/authRoutes.js";
-
 dotenv.config();
-connectDB();
+
+import express from 'express';
+import connectDB from './config/db.js';
+import cors from 'cors';
+
+import studyRoutes from './routes/studyRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.use(express.json());
+app.use(cors({ origin: ['http://localhost:5173'] }));
 
 app.get('/', (req, res) => {
-  res.send('API is running...');
+    res.send('API is running...');
 });
-app.use("/api/auth", authRoutes);
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+
+// Connect DB after env is loaded
+connectDB();
+
+app.use('/api/auth', authRoutes);
+app.use('/api/study', studyRoutes);
+
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

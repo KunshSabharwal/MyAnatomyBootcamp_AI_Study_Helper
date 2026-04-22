@@ -1,5 +1,5 @@
 import axios from "axios";
-const API = axios.create({ baseURL: "https://69e5d6bf4a15e408fe4a05e7-api-capstone.myanatomy.ai" });
+const API = axios.create({ baseURL: "http://localhost:8080" });
 
 
 API.interceptors.request.use((req) => {
@@ -10,4 +10,9 @@ API.interceptors.request.use((req) => {
   return req;
 });
 export const register = (formData) => API.post("/api/auth/register", formData);
+
 export const login = (formData) => API.post("/api/auth/login", formData);
+export const generateStudyMaterial = (text) =>
+  API.post("/api/study/generate-study-material", { text });
+
+export const getHistory = () => API.get("/api/study/history");
